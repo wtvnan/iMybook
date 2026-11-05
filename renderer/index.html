@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>iMybook - Reading Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>iMybook</h1>
+            <p>Your personal reading companion</p>
+        </div>
+
+        <nav>
+            <button id="discoverNav" class="nav-button active">
+                Discover Books
+            </button>
+
+            <button id="readingNav" class="nav-button">
+                My Reading List
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PAGE 1: DISCOVER BOOKS -->
+
+        <section id="discoverPage" class="page active-page">
+
+            <div class="page-heading">
+                <h2>Discover Books</h2>
+                <p>Search and explore books from Open Library.</p>
+            </div>
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter book title, author or keyword..."
+                >
+
+                <select id="categorySelect">
+                    <option value="all">All Categories</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="romance">Romance</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="self-help">Self-Help</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="programming">Programming</option>
+                </select>
+
+                <button id="searchButton" class="primary-button">
+                    Search
+                </button>
+
+            </div>
+
+            <div id="suggestionBox" class="suggestion-box">
+                <h3>Book Suggestion</h3>
+                <p id="suggestionText">
+                    Select a category and search for books to receive a suggestion.
+                </p>
+            </div>
+
+            <div id="message"></div>
+
+            <div id="bookResults" class="book-grid"></div>
+
+        </section>
+
+
+        <!-- PAGE 2: MY READING LIST -->
+
+        <section id="readingPage" class="page">
+
+            <div class="page-heading">
+                <h2>My Reading List</h2>
+                <p>Manage your personal book collection.</p>
+            </div>
+
+            <div class="reading-summary">
+
+                <div class="summary-card">
+                    <h3 id="totalBooks">0</h3>
+                    <p>Total Books</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3 id="completedBooks">0</h3>
+                    <p>Completed Books</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3 id="overallProgress">0%</h3>
+                    <p>Overall Progress</p>
+                </div>
+
+            </div>
+
+            <div class="reading-list-container">
+
+                <div class="section-heading">
+                    <h3>My Books</h3>
+
+                    <button id="refreshButton" class="secondary-button">
+                        Refresh List
+                    </button>
+                </div>
+
+                <div id="readingList" class="reading-grid"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>iMybook Reading Application | by Hannan</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
