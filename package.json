@@ -1,0 +1,12 @@
+{
+  "name": "imybook",
+  "version": "1.0.0",
+  "description": "iMybook Reading Book Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "*"
+  }
+}
