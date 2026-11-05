@@ -1,0 +1,372 @@
+
+:root {
+    --espresso: #292820;
+    --brown: #665C4F;
+    --stone: #A69B89;
+    --sand: #E8E1D5;
+    --ivory: #F8F6F0;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--ivory);
+    color: var(--espresso);
+}
+
+header {
+    background: var(--espresso);
+    color: var(--ivory);
+    padding: 30px 45px 0;
+}
+
+.header-content h1 {
+    font-size: 34px;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.header-content p {
+    color: var(--stone);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-button {
+    padding: 13px 20px;
+    border: none;
+    background: transparent;
+    color: var(--stone);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.nav-button.active {
+    background: var(--ivory);
+    color: var(--espresso);
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    color: var(--white);
+}
+
+main {
+    max-width: 1120px;
+    margin: 42px auto;
+    padding: 0 30px;
+    min-height: 550px;
+}
+
+.page {
+    display: none;
+}
+
+.active-page {
+    display: block;
+}
+
+.page-heading {
+    margin-bottom: 28px;
+}
+
+.page-heading h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 9px;
+}
+
+.page-heading p {
+    color: var(--brown);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+input,
+select {
+    padding: 13px;
+    border: 1px solid var(--sand);
+    border-radius: 4px;
+    background: var(--white);
+    color: var(--espresso);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--brown);
+}
+
+#searchInput {
+    flex: 1;
+}
+
+#categorySelect {
+    width: 175px;
+}
+
+button {
+    font-family: Arial, sans-serif;
+}
+
+.primary-button {
+    background: var(--espresso);
+    color: var(--ivory);
+    border: 1px solid var(--espresso);
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: var(--brown);
+}
+
+.secondary-button {
+    background: var(--sand);
+    color: var(--espresso);
+    border: none;
+    padding: 11px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background: var(--stone);
+}
+
+.suggestion-box {
+    background: var(--sand);
+    border-left: 3px solid var(--brown);
+    padding: 22px;
+    margin-bottom: 28px;
+    border-radius: 3px;
+}
+
+.suggestion-box h3 {
+    font-size: 19px;
+    margin-bottom: 9px;
+}
+
+.suggestion-box p {
+    color: var(--brown);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+#message {
+    margin-bottom: 16px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.success-message {
+    color: #426348;
+}
+
+.error-message {
+    color: #A04438;
+}
+
+.book-grid,
+.reading-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.book-card {
+    background: var(--white);
+    border: 1px solid var(--sand);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 14px rgba(41, 40, 32, 0.04);
+}
+
+.book-card img {
+    width: 115px;
+    height: 160px;
+    object-fit: contain;
+    margin: 0 auto 18px;
+    background: var(--ivory);
+}
+
+.book-card h3 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.book-card p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: var(--brown);
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+
+.book-details {
+    flex: 1;
+}
+
+.add-button {
+    background: var(--espresso);
+    color: var(--ivory);
+    border: none;
+    padding: 11px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.add-button:hover {
+    background: var(--brown);
+}
+
+.reading-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.summary-card {
+    background: var(--sand);
+    padding: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.summary-card h3 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.summary-card p {
+    color: var(--brown);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.reading-list-container {
+    background: var(--white);
+    padding: 25px;
+    border: 1px solid var(--sand);
+    border-radius: 5px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.section-heading h3 {
+    font-size: 21px;
+    font-weight: normal;
+}
+
+.progress-input {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.progress-text {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--espresso) !important;
+}
+
+.update-button {
+    background: var(--sand);
+    color: var(--espresso);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.update-button:hover {
+    background: var(--stone);
+}
+
+.delete-button {
+    background: transparent;
+    color: #A04438;
+    border: 1px solid #D8B8AF;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.delete-button:hover {
+    background: #F7ECE8;
+}
+
+.empty-message {
+    color: var(--brown);
+    padding: 20px 0;
+    grid-column: 1 / -1;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+    background: var(--espresso);
+    color: var(--stone);
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+@media (max-width: 700px) {
+    .search-container {
+        flex-direction: column;
+    }
+
+    #categorySelect {
+        width: 100%;
+    }
+
+    .reading-summary {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    main {
+        padding: 0 15px;
+    }
+}
