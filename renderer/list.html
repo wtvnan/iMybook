@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iMybook - My Reading List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <span class="brand">📚 iMybook</span>
+    <a href="index.html">Search Books</a>
+    <a href="list.html" class="active">My Reading List</a>
+  </nav>
+
+  <main>
+    <h1>My Reading List</h1>
+    <p id="stats" class="hint"></p>
+    <p id="message" class="message"></p>
+
+    <form id="bookForm" class="panel">
+      <h2 id="formTitle">Add a Book</h2>
+      <label>Title <input type="text" id="title"></label>
+      <label>Author <input type="text" id="author"></label>
+      <label>Total pages <input type="number" id="pages" min="1"></label>
+      <label>Days to finish <input type="number" id="days" min="1"></label>
+      <label>Status
+        <select id="status">
+          <option>Planned</option>
+          <option>Reading</option>
+          <option>Done</option>
+        </select>
+      </label>
+      <button type="submit" id="submitBtn">Add Book</button>
+      <button type="button" id="cancelBtn" class="grey" hidden>Cancel</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th><th>Author</th><th>Pages</th><th>Days</th>
+          <th>Pages/day</th><th>Status</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="bookRows"></tbody>
+    </table>
+
+    <section>
+      <h2>⭐ Last Saved Suggestions</h2>
+      <div id="savedSuggestions"></div>
+    </section>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="list.js"></script>
+</body>
+</html>
